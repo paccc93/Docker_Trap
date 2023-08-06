@@ -1,8 +1,7 @@
 locals {
- # Amazon Linux 
- #ami      = "ami-0f34c5ae932e6f0e4"
- #Ubunutu 22.04
- ami      = "ami-053b0d53c279acc90"
+ 
+ #ami      = "ami-0f34c5ae932e6f0e4" # Amazon Linux 
+ ami      = "ami-053b0d53c279acc90" #Ubunutu 22.04
  type     = "t2.micro"
  name_tag = "My EC2 Instance"
  laptop_outbound_ip = "188.36.239.121"

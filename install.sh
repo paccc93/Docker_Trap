@@ -22,6 +22,7 @@ wget https://raw.githubusercontent.com/paccc93/Docker_Trap/main/DockerTrap/honey
 sudo cp honeypot /usr/bin/honeypot
 sudo cp honeypot /usr/bin/honeypot.clean
 sudo chmod 755 /usr/bin/honeypot
+sudo chmod 755 /usr/bin/honeypot.clean
 cat <<EOF >>/etc/xinetd.d/honeypot
 # Container launcher for an SSH honeypot 
 service honeypot
@@ -40,7 +41,7 @@ service honeypot
 }
 EOF
 sudo su <<HERE
-sed -i '24d' /etc/services
+#sed -i '24d' /etc/services
 sudo echo -e "ssh          2222/tcp \nhoneypot     22/tcp" >> /etc/services
 echo "*/5 * * * * /usr/bin/honeypot.clean" >> /etc/crontab
 HERE
