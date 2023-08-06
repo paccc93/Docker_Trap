@@ -48,8 +48,8 @@ HERE
 auditctl -a exit,always -F arch=b64 -S execve
 auditctl -a exit,always -F arch=b32 -S execve
 mkdir honeypot-test
-wget https://raw.githubusercontent.com/mrhavens/DockerTrap/master/apitrap.sh
-wget https://raw.githubusercontent.com/mrhavens/DockerTrap/master/alpinetrap/Dockerfile
+wget https://raw.githubusercontent.com/paccc93/Docker_Trap/main/DockerTrap/apitrap.sh
+wget https://raw.githubusercontent.com/paccc93/Docker_Trap/main/DockerTrap/Dockerfile
 cp Dockerfile honeypot-test/
 cd honeypot-test/
 docker build . -t honeypot-test:latest
