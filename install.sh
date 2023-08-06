@@ -17,8 +17,8 @@ sudo usermod -aG docker ubuntu
 echo "Port 2222" >> /etc/ssh/sshd_config
 systemctl restart sshd
 sudo apt -y install socat xinetd auditd netcat-openbsd
-wget https://raw.githubusercontent.com/mrhavens/DockerTrap/master/honeypot/honeypot
-wget https://raw.githubusercontent.com/mrhavens/DockerTrap/master/honeypot/honeypot.clean
+wget https://raw.githubusercontent.com/paccc93/Docker_Trap/main/DockerTrap/honeypot
+wget https://raw.githubusercontent.com/paccc93/Docker_Trap/main/DockerTrap/honeypot.clean
 sudo cp honeypot /usr/bin/honeypot
 sudo cp honeypot /usr/bin/honeypot.clean
 sudo chmod 755 /usr/bin/honeypot
